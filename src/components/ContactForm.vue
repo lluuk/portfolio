@@ -52,8 +52,11 @@ export default {
                 ...this.formData,
             }),
             })
-            .then(data => console.log({data}))
-            .catch(error => alert(error))
+            .then(() => {
+                this.$toasted.success('Message was succesfully sent', { duration: 3000 })
+                this.formData = {}
+            })
+            .catch(error => this.$toasted.error(error.message, { duration: 3000 }))
         }
         }
 };

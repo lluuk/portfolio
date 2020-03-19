@@ -60,11 +60,12 @@
 		}
 
 		@include breakpoint('<=medium') {
-			display: block;
 
 			section {
 				border-top-width: 1px !important;
-				border-left-width: 0 !important;
+				&:not(:nth-child(even)) {
+					border-left-width: 0 !important;
+				}
 				width: 50%;
 
 				&:first-child {
@@ -76,7 +77,6 @@
 		@include breakpoint('<=small') {
 			section {
 				@include padding(2em, 1.5em, (0.5em, 0, 0, 4em));
-				width: 100%;
 
 				.icon {
 					left: 1.5em;
@@ -88,11 +88,22 @@
 		@include breakpoint('<=xsmall') {
 			section {
 				@include padding(2em, 1.5em, (0, 0, 0, 0));
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
 
 				.icon {
 					left: 0;
 					position: relative;
 					top: 0;
+					margin-bottom: 10px;
+				}
+
+				p {
+					margin: 0;
 				}
 			}
 		}

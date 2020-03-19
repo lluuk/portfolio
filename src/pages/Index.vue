@@ -6,8 +6,8 @@
       <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner" v-scroll-spy-active v-scroll-spy-link>
           <h1>Hello, I'm Łukasz Zapolski.</h1>
-          <p>I'm ambitious Frontend Developer with over 3 years of experience. <br/>
-          I have experience building many web and mobile applications.<br/><br/>
+          <p>I'm an ambitious Frontend Developer with over 3 years of experience.<br/>
+          I have experience in building many web and mobile applications.<br/><br/>
           <a v-scroll-to="'#three'">Let's make something special</a></p>
           <ul class="actions">
             <li>
@@ -20,7 +20,7 @@
       <section id="one" class="wrapper style2 spotlights">
         <section>
           <a href="/#" class="image" alt="image">
-            <g-image src="~/assets/img/pic01.jpg" alt data-position="center center" />
+            <g-image src="~/assets/img/pic01.jpg" alt data-position="center center" style="width:100%" />
           </a>
           <div class="content">
             <div class="inner">
@@ -33,7 +33,7 @@
         </section>
         <section>
           <a href="/#" class="image" alt="image">
-            <g-image src="~/assets/img/pic02.jpg" alt data-position="center center" />
+            <g-image src="~/assets/img/pic02.jpg" alt data-position="center center" style="width:100%" />
           </a>
           <div class="content">
             <div class="inner">
@@ -46,7 +46,7 @@
         </section>
         <section>
           <a href="/#" class="image" alt="image">
-            <g-image src="~/assets/img/pic03.jpg" alt data-position="center center" />
+            <g-image src="~/assets/img/pic03.jpg" alt data-position="center center" style="width:100%" />
           </a>
           <div class="content">
             <div class="inner">
