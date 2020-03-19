@@ -169,27 +169,7 @@
           <p>Have a question or want to work together?</p>
           <div class="split style1">
             <section>
-              <form method="post" action="#">
-                <div class="fields">
-                  <div class="field half">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
-                  </div>
-                  <div class="field half">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" />
-                  </div>
-                  <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="5" />
-                  </div>
-                </div>
-                <ul class="actions">
-                  <li>
-                    <a href="/#" class="button submit">Send Message</a>
-                  </li>
-                </ul>
-              </form>
+              <contact-form />
             </section>
             <section>
               <ul class="contact">
@@ -234,9 +214,11 @@
 
 <script>
 import BaseSidebar from "~/components/BaseSidebar";
+import ContactForm from "~/components/ContactForm";
 export default {
   components: {
-    BaseSidebar
-  }
+    BaseSidebar,
+    ContactForm,
+  },
 };
 </script>
