@@ -56,7 +56,7 @@ export default {
                 this.$toasted.success('Message was succesfully sent', { duration: 3000 })
                 this.formData = {}
             })
-            .catch(error => this.$toasted.error(error.message, { duration: 3000 }))
+            .catch(() => this.$toasted.error('Unfortunately message was not sent', { duration: 3000 }))
         }
         }
 };
