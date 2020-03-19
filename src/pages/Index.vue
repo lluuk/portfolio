@@ -4,9 +4,11 @@
 
     <div id="wrapper" v-scroll-spy>
       <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
+        <div class="inner" v-scroll-spy-active v-scroll-spy-link>
           <h1>Hello, I'm Łukasz Zapolski.</h1>
-          <p>I'm a frontend developer.</p>
+          <p>I'm ambitious Frontend Developer with over 3 years of experience. <br/>
+          I have experience building many web and mobile applications.<br/><br/>
+          <a v-scroll-to="'#three'">Let's make something special</a></p>
           <ul class="actions">
             <li>
               <a v-scroll-to="'#one'" class="button">Check more</a>
@@ -22,11 +24,9 @@
           </a>
           <div class="content">
             <div class="inner">
-              <h2>Sed ipsum dolor</h2>
+              <h2>Everyday journal</h2>
               <p>
-                Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
-                turpis mauris, eu ultricies erat malesuada quis. Aliquam
-                dapibus.
+                Mobile App for IOS and Android. Work in progress.
               </p>
             </div>
           </div>
@@ -37,11 +37,9 @@
           </a>
           <div class="content">
             <div class="inner">
-              <h2>Feugiat consequat</h2>
+              <h2>Dasboard panel</h2>
               <p>
-                Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
-                turpis mauris, eu ultricies erat malesuada quis. Aliquam
-                dapibus.
+                Web application. Work in progress.
               </p>
             </div>
           </div>
@@ -52,11 +50,9 @@
           </a>
           <div class="content">
             <div class="inner">
-              <h2>Ultricies aliquam</h2>
+              <h2>Social app</h2>
               <p>
-                Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
-                turpis mauris, eu ultricies erat malesuada quis. Aliquam
-                dapibus.
+                Work in progress.
               </p>
             </div>
           </div>
@@ -65,61 +61,103 @@
 
       <section id="two" class="wrapper style3 fade-up">
         <div class="inner">
-          <h2>What we do</h2>
-          <p>
-            Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
-            turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus,
-            lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
-            imperdiet est velit quis lorem.
-          </p>
+          <h2>My skills</h2>
           <div class="features">
             <section>
-              <span class="icon major fa-code" />
-              <h3>Lorem ipsum amet</h3>
-              <p>
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
+              <span class="icon major"><font-awesome :icon="['fab', 'html5']"/></span>
+              <p>HTML</p>
             </section>
             <section>
-              <span class="icon major fa-lock" />
-              <h3>Aliquam sed nullam</h3>
-              <p>
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
+              <span class="icon major"><font-awesome :icon="['fab', 'css3-alt']"/></span>
+              <p>CSS</p>
             </section>
             <section>
-              <span class="icon major fa-cog" />
-              <h3>Sed erat ullam corper</h3>
-              <p>
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
+              <span class="icon major"><font-awesome :icon="['fab', 'js-square']"/></span>
+              <p>Javascript</p>
             </section>
             <section>
-              <span class="icon major fa-desktop" />
-              <h3>Veroeros quis lorem</h3>
-              <p>
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
+              <span class="icon major"><font-awesome :icon="['fab', 'react']"/></span>
+              <p>React</p>
             </section>
             <section>
-              <span class="icon major fa-chain" />
-              <h3>Urna quis bibendum</h3>
-              <p>
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
+              <span class="icon major"><font-awesome :icon="['fab', 'vuejs']"/></span>
+              <p>Vue</p>
             </section>
             <section>
-              <span class="icon major fa-diamond" />
-              <h3>Aliquam urna dapibus</h3>
-              <p>
-                Phasellus convallis elit id ullam corper amet et pulvinar. Duis
-                aliquam turpis mauris, sed ultricies erat dapibus.
-              </p>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>PWA</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'react']"/></span>
+              <p>React Native</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'node']"/></span>
+              <p>Node.js</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Redux</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Vuex</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'react']"/></span>
+              <p>Next.js</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'vuejs']"/></span>
+              <p>Nuxt.js</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'bootstrap']"/></span>
+              <p>Bootstrap</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Material UI</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>GraphQL</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Appolo</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'git']"/></span>
+              <p>Git</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'sass']"/></span>
+              <p>Sass</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Jest</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Webpack</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'gulp']"/></span>
+              <p>Gulp</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>css-in-js</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Gridsome</p>
+            </section>
+            <section>
+              <span class="icon major"><font-awesome :icon="['fab', 'codepen']"/></span>
+              <p>Netlify</p>
             </section>
           </div>
         </div>
@@ -163,12 +201,14 @@
                   <h3>Social</h3>
                   <ul class="icons">
                     <li>
-                      <a href="https://twitter.com/luuuk_17" target="_blank" class="fa-twitter">
+                      <a href="https://twitter.com/luuuk_17" target="_blank">
+                        <font-awesome :icon="['fab', 'twitter']"/>
                         <span class="label">Twitter</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/lluuk" target="_blank" class="fa-github">
+                      <a href="https://github.com/lluuk" target="_blank">
+                        <font-awesome :icon="['fab', 'github']"/>
                         <span class="label">GitHub</span>
                       </a>
                     </li>
@@ -176,8 +216,8 @@
                       <a
                         href="https://www.linkedin.com/in/%C5%82ukasz-zapolski-16115b107"
                         target="_blank"
-                        class="fa-linkedin"
                       >
+                        <font-awesome :icon="['fab', 'linkedin']"/>
                         <span class="label">LinkedIn</span>
                       </a>
                     </li>

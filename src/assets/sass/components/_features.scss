@@ -16,15 +16,15 @@
 
 		section {
 			@include padding(3em, 3em, (0.5em, 0, 0, 4em));
-			width: 50%;
+			width: 25%;
 			border-top: solid 1px _palette(border);
 			position: relative;
 
-			&:nth-child(-n + 2) {
+			&:nth-child(-n + 4) {
 				border-top-width: 0;
 			}
 
-			&:nth-child(2n) {
+			&:not(:first-child), &:not(:nth-child(5)) {
 				border-left: solid 1px _palette(border);
 			}
 
@@ -65,7 +65,7 @@
 			section {
 				border-top-width: 1px !important;
 				border-left-width: 0 !important;
-				width: 100%;
+				width: 50%;
 
 				&:first-child {
 					border-top-width: 0 !important;
@@ -76,6 +76,7 @@
 		@include breakpoint('<=small') {
 			section {
 				@include padding(2em, 1.5em, (0.5em, 0, 0, 4em));
+				width: 100%;
 
 				.icon {
 					left: 1.5em;

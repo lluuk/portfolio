@@ -68,6 +68,10 @@
 		padding: 0;
 	}
 
+	a:hover {
+		cursor: pointer;
+	}
+
 	input, select, textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;

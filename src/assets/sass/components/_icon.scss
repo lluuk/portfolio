@@ -18,13 +18,19 @@
 		&.major {
 			width: 2.5em;
 			height: 2.5em;
-			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			background: _palette(fg-bold);
 			border-radius: 100%;
-			color: _palette(bg);
+			color: _palette(accent3);
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 (_size(element-margin) * 0.65) 0;
+
+			& > svg {
+				font-size: 1.75em;
+			}
 
 			&:before {
 				font-size: 1.25em;

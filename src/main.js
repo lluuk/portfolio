@@ -2,14 +2,53 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import VueScrollTo from 'vue-scrollto'
 import Scrollspy from 'vue2-scrollspy'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import {
+    faGithub,
+    faTwitter,
+    faLinkedin,
+    faHtml5,
+    faCss3Alt,
+    faJsSquare,
+    faReact,
+    faVuejs,
+    faCodepen,
+    faNode,
+    faBootstrap,
+    faGit,
+    faSass,
+    faGulp,
+  } from '@fortawesome/free-brands-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '~/assets/sass/main.scss'
 
 import DefaultLayout from '~/layouts/Default.vue'
 
+config.autoAddCss = false;
+library.add(
+  faGithub,
+  faTwitter,
+  faLinkedin,
+  faHtml5,
+  faCss3Alt,
+  faJsSquare,
+  faReact,
+  faVuejs,
+  faCodepen,
+  faNode,
+  faBootstrap,
+  faGit,
+  faSass,
+  faGulp
+)
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  Vue.component('font-awesome', FontAwesomeIcon)
 
   Vue.use(VueScrollTo, {
     duration: 500,
