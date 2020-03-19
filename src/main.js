@@ -52,7 +52,7 @@ export default function (Vue, { router, head, isClient }) {
   if (isClient) { 
     const VueScrollTo = require("vue-scrollto")
     const Scrollspy = require("vue2-scrollspy")
-    const Toasted = require('vue-toasted')
+    const Toasted = require('vue-toasted').default
 
     Vue.use(VueScrollTo, {
       duration: 500,
