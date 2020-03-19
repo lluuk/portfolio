@@ -1,7 +1,5 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
-import VueScrollTo from 'vue-scrollto'
-import Scrollspy from 'vue2-scrollspy'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -50,12 +48,17 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.component('font-awesome', FontAwesomeIcon)
 
-  Vue.use(VueScrollTo, {
-    duration: 500,
-    easing: "ease",
-  })
+  if (isClient) { 
+    const VueScrollTo = require("vue-scrollto")
+    const Scrollspy = require("vue2-scrollspy")
 
-  Vue.use(Scrollspy)
+    Vue.use(VueScrollTo, {
+      duration: 500,
+      easing: "ease",
+    })
+  
+    Vue.use(Scrollspy)
+}
 
   head.meta.push({
     name: 'keywords',
