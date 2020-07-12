@@ -19,8 +19,8 @@
 					</p>
 					<ul class="actions">
 						<li>
-							<a v-scroll-to="'#one'" class="button"
-								>Check more</a
+							<g-link to="/blog" class="button"
+								>Check my blog</g-link
 							>
 						</li>
 					</ul>

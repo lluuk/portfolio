@@ -7,5 +7,29 @@
 module.exports = {
   siteName: 'Łukasz Zapolski - Frontend Developer',
   siteDescription: 'Portfolio of Łukasz Zapolski - developer specialized in creating web and mobile applications.',
-  plugins: []
+  transformers: {
+    remark: {
+      
+    }
+  },
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/posts/*.md',
+        typeName: 'Post',
+        route: '/blog/:title',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
+      }
+    }
+  ],
+  templates: {
+    Post: '/blog/:title',
+    Tag: '/tag/:id'
+  }
 }

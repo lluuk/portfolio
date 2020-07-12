@@ -6,6 +6,9 @@
         <li>
           <g-link to="/">Home</g-link>
         </li>
+        <li>
+          <g-link to="/blog">Blog</g-link>
+        </li>
       </ul>
     </nav>
   </header>
