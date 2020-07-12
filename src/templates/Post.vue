@@ -13,10 +13,6 @@
           </div>
 
           <div class="post content-box">
-            <div class="post__header">
-              <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
-            </div>
-
             <div class="post__content" v-html="$page.post.content" />
 
             <div>
@@ -64,7 +60,6 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (width: 860, blur: 10)
   }
 }
 </page-query>
@@ -72,6 +67,7 @@ query Post ($id: ID!) {
 <style lang="scss">
 .post-title {
   text-align: center;
+  margin-bottom: 75px;
 
   &__text {
     margin-bottom: 10px;
@@ -84,21 +80,14 @@ query Post ($id: ID!) {
 
 .post {
 
-  &__header {
-
-    img {
-      width: 100%;
-    }
-
-    &:empty {
-      display: none;
-    }
-  }
-
   &__content {
     img {
       display: block;
       max-width: 100%;
+    }
+
+    h2 {
+      margin-top: 75px;
     }
   }
 }

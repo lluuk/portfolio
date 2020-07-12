@@ -4,7 +4,6 @@ date: 2020-07-12
 published: true
 tags: ['Web performance','Vue', 'Nuxt']
 canonical_url: false
-cover_image: null
 description: "Tips to give your web application performance boost"
 ---
 
