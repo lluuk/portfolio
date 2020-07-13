@@ -25,14 +25,14 @@ The solution to this problem is, among others code splitting, which allows to se
 
 ## 2. Dynamic import of third-party libraries
 
-A similar situation as in the first point is with third-party libraries. They are often very heavy and significantly burden application performance. In addition, some libraries are only used on single views. We can use our knowledge from the previous point and do the same with external libraries: load them only when needed.
+A similar situation, as in the first point is with third-party libraries. They are often very heavy and significantly burden application performance. In addition, some libraries are only used on single views. We can use our knowledge from the previous point, and do the same with external libraries: load them only when needed.
 
 ![Image](./images/import-library-on-demand.png)
 
 
 ## 3. Remove unnecessary third-party libraries and replace them with less burdensome solutions
 
-Analyze the libraries you use. Check their cost (you can use the great website [bundlephobia.com](https://bundlephobia.com/)) and think about whether you can replace them with a less burdensome solution. An example would be the removal of vue-country-flag library (Unpacked Size: 1.09 MB) and replaced with svg icons which are downloaded on demand
+Analyze the libraries you use. Check their cost (you can use the great website [bundlephobia.com](https://bundlephobia.com/)) and think about whether you can replace them with a less burdensome solution. An example would be the removing a vue-country-flag library (Unpacked Size: 1.09 MB) and replacing it with svg icons which are downloaded on demand
 
 ![Image](./images/dynamic-icons.png)
 
@@ -43,7 +43,7 @@ We often use large and heavy libraries such as lodash or moment.js in our applic
 
 `import _ from ‘lodash’`
 
-However, this solution has its serious disadvantage. Importing of a whole library will lead to the largest bundle size and will negatively impact application performance. Fortunately, solving this problem is pretty easy. We can import only needed functions from the library
+However, this solution has its serious disadvantage. Importing the entire library will lead to the largest bundle size and will negatively impact application performance. Fortunately, solving this problem is pretty easy. We can import only needed functions from the library
 
 ![Image](./images/lodash.png)
 
@@ -73,7 +73,7 @@ Great benefit of service worker is ability to cache all of its necessary resourc
 ## 8. Preload critical bundles
 
 As a developers we should know which resources are the most important for our page. With that in mind we can request the critical resources ahead of time and speed up the loading process.
-The simplest way to implement preload is to add a <link> tag to the <head> of the document:
+The simplest way to implement preload is to add a `link` tag to the `head` of the document:
 
 `<link rel="preload" as="script" href="critical.js">`
 
@@ -94,7 +94,7 @@ Images optimizations definitely will improve your site’s performance, SEO and 
 
 ## 10. Preconnect to required origins
 
-Using the keyword preconnect gives a signal to the bowser to establish early connections to important third-party origins. Establishing connections often involves significant time in slow networks. The way to implement preload is to add a <link> tag to the <head> of the document:
+Using the keyword preconnect gives a signal to the bowser to establish early connections to important third-party origins. Establishing connections often involves significant time in slow networks. The way to implement preload is to add a `link` tag to the `head` of the document:
 
 `<link rel="preconnect" href="https://www.example.com">`
 
