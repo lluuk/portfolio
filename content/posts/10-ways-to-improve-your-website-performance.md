@@ -81,7 +81,7 @@ The simplest way to implement preload is to add a `link` tag to the `head` of th
 ## 9. Reduce the size of photos and icons
 
 According to HTTP Archive, as of November 2018, images make up on average 21% of a total webpage’s weight.
-You should use this knowledge optimize each image on your website. That means, it should have an optimal size so your site’s loading doesn’t get affected by it.
+You should use this knowledge to optimize each image on your website. That means, it should have an optimal size so your site’s loading doesn’t get affected by it.
 
 How to do it:
 * Reduce file size before uploading
